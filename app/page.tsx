@@ -7,11 +7,9 @@ import Stats from '@/components/sections/Stats'
 import CTA from '@/components/sections/CTA'
 import Footer from '@/components/sections/Footer'
 
-// @lpg: This is the 1-page layout — sections scroll vertically.
-// Add section IDs, adjust order if needed, remove any unused sections.
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[#0a0a14] min-h-screen">
       <Navbar />
       <Hero />
       <SocialProof />
