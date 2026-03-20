@@ -1,3 +1,4 @@
+```tsx
 import Link from 'next/link'
 import { Mail, MapPin, Zap, ArrowRight } from 'lucide-react'
 
@@ -32,7 +33,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-[#0f0f13] border-t border-white/10">
+    <footer className="relative bg-surface-primary border-t border-white/10">
       {/* Ambient glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-brand-500/5 blur-[120px] pointer-events-none" />
       
@@ -136,3 +137,4 @@ export default function Footer() {
     </footer>
   )
 }
+```

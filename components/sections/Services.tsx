@@ -65,7 +65,7 @@ export default function Services() {
           <h2 className="font-heading font-black text-display-lg text-content-primary mb-4">
             {HEADING}
           </h2>
-          <p className="max-w-3xl mx-auto text-lg text-content-secondary leading-relaxed">
+          <p className="max-w-3xl mx-auto font-body text-lg text-content-secondary leading-relaxed">
             {SUBTEXT}
           </p>
         </AnimateIn>
@@ -73,19 +73,19 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((svc, i) => (
             <AnimateIn key={svc.title} delay={i * 80} direction="up">
-              <div className="group relative h-full p-8 rounded-card-lg border border-white/5 bg-white/[0.03] hover:border-brand-500/40 transition-all duration-500 ease-expo-out overflow-hidden">
+              <div className="group relative h-full p-8 rounded-card-lg border border-surface/5 bg-surface/3 hover:border-brand-500/40 transition-all duration-500 ease-expo-out cursor-pointer overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 <div className="absolute inset-0 bg-brand-500/0 group-hover:bg-brand-500/[0.03] transition-colors duration-500 rounded-card-lg" />
                 
                 <div className="relative">
                   <div className="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center mb-6 group-hover:bg-brand-500/20 group-hover:scale-110 transition-all duration-300 ease-expo-out">
-                    <svc.icon className="w-7 h-7 text-brand-500" />
+                    <svc.icon className="w-7 h-7 text-brand-500 transition-transform duration-300 group-hover:scale-110" />
                   </div>
                   <h3 className="font-heading font-bold text-xl text-content-primary mb-3">
                     {svc.title}
                   </h3>
-                  <p className="text-content-secondary leading-relaxed">
+                  <p className="font-body text-content-secondary leading-relaxed">
                     {svc.description}
                   </p>
                 </div>

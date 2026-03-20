@@ -1,3 +1,4 @@
+```tsx
 import Navbar from '@/components/ui/Navbar'
 import Hero from '@/components/sections/Hero'
 import SocialProof from '@/components/sections/SocialProof'
@@ -9,7 +10,7 @@ import Footer from '@/components/sections/Footer'
 
 export default function Home() {
   return (
-    <main className="bg-[#0a0a14] min-h-screen">
+    <main className="bg-[var(--brand-900)] min-h-screen">
       <Navbar />
       <Hero />
       <SocialProof />
@@ -21,3 +22,4 @@ export default function Home() {
     </main>
   )
 }
+```

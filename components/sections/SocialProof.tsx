@@ -45,14 +45,14 @@ const testimonials = [
 
 export default function SocialProof() {
   return (
-    <section className="py-section bg-[#0f0f13] relative overflow-hidden">
+    <section className="py-section bg-[var(--color-surface-primary)] relative overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-500/[0.06] blur-[180px] pointer-events-none" />
       
       {/* Dot grid texture */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.08]"
            style={{
-             backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
+             backgroundImage: 'radial-gradient(circle, var(--color-border-subtle) 1px, transparent 1px)',
              backgroundSize: '40px 40px',
            }} />
 
@@ -61,11 +61,11 @@ export default function SocialProof() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
           {stats.map((stat, i) => (
             <AnimateIn key={stat.label} delay={i * 80}>
-              <div className="text-center p-6 rounded-card-lg border border-white/[0.06] bg-white/[0.02] hover:border-brand-500/30 hover:bg-white/[0.04] transition-all duration-300">
+              <div className="text-center p-6 rounded-card border border-white/[0.06] bg-white/[0.02] hover:border-brand-500/30 hover:bg-white/[0.04] transition-all duration-300">
                 <div className="font-heading font-black text-[clamp(2rem,4vw,3rem)] text-brand-500 leading-none mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-content-muted">{stat.label}</div>
+                <div className="text-sm text-content-muted font-body">{stat.label}</div>
               </div>
             </AnimateIn>
           ))}
@@ -73,15 +73,15 @@ export default function SocialProof() {
 
         {/* Trust badge */}
         <AnimateIn direction="up" className="text-center mb-12">
-          <p className="text-sm text-content-muted uppercase tracking-widest mb-6">
+          <p className="text-sm text-content-muted uppercase tracking-widest mb-6 font-body">
             Trusted by forward-thinking teams worldwide
           </p>
         </AnimateIn>
 
         {/* Client logos marquee */}
         <div className="relative mb-20 overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0f0f13] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0f0f13] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[var(--color-surface-primary)] to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[var(--color-surface-primary)] to-transparent z-10 pointer-events-none" />
           <div className="flex gap-8 animate-marquee w-max">
             {[...clients, ...clients].map((name, i) => (
               <div
@@ -109,7 +109,7 @@ export default function SocialProof() {
                   </svg>
                 </div>
                 
-                <p className="text-content-primary leading-relaxed mb-6 text-lg font-light">
+                <p className="text-content-primary leading-relaxed mb-6 text-lg font-light font-body">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 
@@ -118,8 +118,8 @@ export default function SocialProof() {
                     {t.avatar}
                   </div>
                   <div>
-                    <div className="font-medium text-content-primary">{t.author}</div>
-                    <div className="text-sm text-content-muted">{t.role}</div>
+                    <div className="font-medium text-content-primary font-body">{t.author}</div>
+                    <div className="text-sm text-content-muted font-body">{t.role}</div>
                   </div>
                 </div>
               </div>

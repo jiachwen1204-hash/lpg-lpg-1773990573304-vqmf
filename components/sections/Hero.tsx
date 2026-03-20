@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#0f0f13] pt-nav"
+      className="relative min-h-screen flex items-center overflow-hidden bg-[var(--surface-primary)] pt-nav"
     >
       {/* Background depth layers */}
       <div className="absolute inset-0">
@@ -29,7 +29,7 @@ export default function Hero() {
         {/* Dot grid */}
         <div className="absolute inset-0 opacity-[0.15]"
           style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, rgba(var(--color-content-primary-rgb), 0.12) 1px, transparent 1px)',
             backgroundSize: '40px 40px',
             maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent)',
           }} />
@@ -48,7 +48,7 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             {/* Badge */}
             <AnimateIn delay={0}>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-pill border border-surface-border bg-brand-500/10 text-sm text-brand-400 mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-pill border border-surface-border bg-brand-500/10 font-body text-sm text-brand-400 mb-8">
                 <span className="w-2 h-2 rounded-full bg-brand-400 animate-pulse" />
                 {CONTENT.badge}
               </div>
@@ -67,7 +67,7 @@ export default function Hero() {
 
             {/* Subline */}
             <AnimateIn delay={160}>
-              <p className="text-lg md:text-xl text-content-secondary/80 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+              <p className="text-lg md:text-xl font-body text-content-secondary/80 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
                 {CONTENT.subline}
               </p>
             </AnimateIn>
@@ -101,7 +101,7 @@ export default function Hero() {
                     <div className="font-heading font-black text-4xl text-brand-400 mb-1">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-content-muted">{stat.label}</div>
+                    <div className="font-body text-sm text-content-muted">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -117,8 +117,8 @@ export default function Hero() {
                 <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent" />
                 
                 <div className="flex items-center justify-between mb-6">
-                  <span className="label-sm text-content-muted">AI Platform Overview</span>
-                  <span className="text-xs text-brand-400 bg-brand-500/10 px-2 py-1 rounded-full">Powered by Zentrix</span>
+                  <span className="label-sm font-body text-content-muted">AI Platform Overview</span>
+                  <span className="font-body text-xs text-brand-400 bg-brand-500/10 px-2 py-1 rounded-full">Powered by Zentrix</span>
                 </div>
                 
                 {/* Fake AI metrics chart */}
@@ -128,7 +128,7 @@ export default function Hero() {
                       className="flex-1 rounded-sm transition-all duration-500"
                       style={{
                         height: `${h}%`,
-                        background: `linear-gradient(to top, #0EA5E9, #0369A1)`,
+                        background: `linear-gradient(to top, var(--brand-400), var(--brand-600))`,
                         opacity: i === 11 ? 1 : 0.3 + (i / 11) * 0.5,
                       }} />
                   ))}
@@ -142,7 +142,7 @@ export default function Hero() {
                     { label: 'Cost Saved', value: '$2.4M', trend: 'Q4', color: 'text-amber-400' },
                   ].map(m => (
                     <div key={m.label} className="rounded-xl bg-white/[0.04] p-3 border border-white/5">
-                      <div className="label-sm text-content-muted mb-1">{m.label}</div>
+                      <div className="label-sm font-body text-content-muted mb-1">{m.label}</div>
                       <div className="font-heading font-bold text-content-primary text-lg">{m.value}</div>
                       <div className={`text-xs mt-0.5 ${m.color}`}>{m.trend}</div>
                     </div>
@@ -152,7 +152,7 @@ export default function Hero() {
                 {/* AI Feature pills */}
                 <div className="flex flex-wrap gap-2 mt-6">
                   {['Content Gen', 'Data Analysis', 'Workflows'].map(tag => (
-                    <span key={tag} className="text-xs px-3 py-1 rounded-pill bg-brand-500/10 text-brand-400 border border-brand-500/20">
+                    <span key={tag} className="font-body text-xs px-3 py-1 rounded-pill bg-brand-500/10 text-brand-400 border border-brand-500/20">
                       {tag}
                     </span>
                   ))}
@@ -165,8 +165,8 @@ export default function Hero() {
                   <span className="text-brand-400 text-sm">⚡</span>
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-content-primary">AI Active</div>
-                  <div className="text-xs text-content-muted">Processing...</div>
+                  <div className="font-body text-xs font-semibold text-content-primary">AI Active</div>
+                  <div className="font-body text-xs text-content-muted">Processing...</div>
                 </div>
               </div>
 
@@ -176,8 +176,8 @@ export default function Hero() {
                   <span className="text-emerald-400 text-sm">↑</span>
                 </div>
                 <div>
-                  <div className="text-xs font-semibold text-content-primary">+127%</div>
-                  <div className="text-xs text-content-muted">Productivity</div>
+                  <div className="font-body text-xs font-semibold text-content-primary">+127%</div>
+                  <div className="font-body text-xs text-content-muted">Productivity</div>
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[#0f0f13] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-[var(--surface-primary)] to-transparent pointer-events-none" />
     </section>
   )
 }

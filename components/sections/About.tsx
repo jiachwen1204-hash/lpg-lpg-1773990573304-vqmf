@@ -1,3 +1,4 @@
+```jsx
 import AnimateIn from '@/components/ui/AnimateIn'
 import { CheckCircle, Brain, Zap, Shield, TrendingUp, Users } from 'lucide-react'
 
@@ -45,7 +46,7 @@ export default function About() {
       {/* Dot grid texture */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
            style={{
-             backgroundImage: 'radial-gradient(circle, #0F172A 1px, transparent 1px)',
+             backgroundImage: 'radial-gradient(circle, var(--content-primary) 1px, transparent 1px)',
              backgroundSize: '32px 32px',
            }} />
 
@@ -72,7 +73,7 @@ export default function About() {
           </AnimateIn>
 
           <AnimateIn delay={300} direction="up">
-            <p className="text-xl text-content-secondary font-light leading-relaxed max-w-3xl mx-auto">
+            <p className="font-body text-xl text-content-secondary font-light leading-relaxed max-w-3xl mx-auto">
               {CONTENT.intro}
             </p>
           </AnimateIn>
@@ -94,7 +95,7 @@ export default function About() {
                 <div className="font-heading font-black text-display-md text-content-primary">
                   {stat.value}
                 </div>
-                <div className="text-sm text-content-muted mt-1">
+                <div className="font-body text-sm text-content-muted mt-1">
                   {stat.label}
                 </div>
               </div>
@@ -145,7 +146,7 @@ export default function About() {
                   <span className="text-2xl">🚀</span>
                   <div>
                     <div className="font-heading font-bold text-sm text-content-primary">AI-Powered</div>
-                    <div className="text-xs text-content-muted">Enterprise Ready</div>
+                    <div className="font-body text-xs text-content-muted">Enterprise Ready</div>
                   </div>
                 </div>
               </div>
@@ -155,13 +156,13 @@ export default function About() {
           {/* Right: Content */}
           <div className="space-y-6">
             <AnimateIn delay={100} direction="right">
-              <p className="text-lg text-content-secondary leading-relaxed">
+              <p className="font-body text-lg text-content-secondary leading-relaxed">
                 {CONTENT.description}
               </p>
             </AnimateIn>
             
             <AnimateIn delay={200} direction="right">
-              <p className="text-lg text-content-secondary leading-relaxed">
+              <p className="font-body text-lg text-content-secondary leading-relaxed">
                 {CONTENT.body}
               </p>
             </AnimateIn>
@@ -179,7 +180,7 @@ export default function About() {
                       <h3 className="font-heading font-bold text-base text-content-primary mb-1">
                         {value.title}
                       </h3>
-                      <p className="text-sm text-content-muted leading-relaxed">
+                      <p className="font-body text-sm text-content-muted leading-relaxed">
                         {value.desc}
                       </p>
                     </div>
@@ -201,7 +202,7 @@ export default function About() {
                 <h3 className="font-heading font-black text-display-lg text-content-primary mb-2">
                   Ready to Transform?
                 </h3>
-                <p className="text-content-secondary max-w-lg">
+                <p className="font-body text-content-secondary max-w-lg">
                   See how Zentrix AI 2 can streamline your operations and accelerate your digital transformation journey.
                 </p>
               </div>
@@ -226,3 +227,4 @@ export default function About() {
     </section>
   )
 }
+```
